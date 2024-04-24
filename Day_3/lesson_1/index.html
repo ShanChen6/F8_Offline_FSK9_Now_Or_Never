@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .form-container {
+        width: 50%;
+        margin-left: 5%;
+      }
+
+      .form-container form table tr td label,
+      .form-container form table tr td input {
+        display: block;
+        width: 80%;
+        margin-bottom: 5px; /* Tạo khoảng cách giữa các label và input */
+      }
+
+      .form-container form table tr td select {
+        display: block;
+        width: 82%;
+        margin-bottom: 5px;
+      }
+
+      .form-container form table tr td button {
+        display: block;
+        width: 92%;
+        margin-left: 0;
+        color: white;
+        background-color: rgb(76, 176, 80);
+      }
+    </style>
+    <title>Form sign up</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <form action="https://api-gateway.fullstack.edu.vn/action_page.php">
+        <h3>Try a free sample</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat a
+          expedita deleniti, cum nulla molestias. Alias minus voluptatem
+          excepturi magnam, error aut ipsa! Tempora, aliquam?
+        </p>
+        <table width="100%" border="0">
+          <tr>
+            <td>
+              <label for="first-name"><strong>First Name</strong></label>
+              <input
+                type="text"
+                name="first-name"
+                id="first-name"
+                placeholder="John"
+                required
+              />
+            </td>
+            <td>
+              <label for="last-name"><strong>Last Name</strong></label>
+              <input
+                type="text"
+                name="last-name"
+                id="last-name"
+                placeholder="Smith"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="email-address"><strong>Email address</strong></label>
+              <input
+                type="text"
+                name="email-address"
+                id="email-address"
+                placeholder="John@example.com"
+                required
+              />
+            </td>
+            <td>
+              <label for="address"><strong>Address</strong></label>
+              <input
+                type="text"
+                name="address"
+                id="address"
+                placeholder="Silk ST"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="city"><strong>City</strong></label>
+              <input
+                type="text"
+                name="city"
+                id="city"
+                placeholder="London"
+                required
+              />
+            </td>
+            <td>
+              <label for="state"><strong>State</strong>(optional)</label>
+              <input type="text" name="state" id="state" required />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="zip-code"><strong>ZIP code</strong></label>
+              <input
+                type="text"
+                name="zip-code"
+                id="zip-code"
+                placeholder="ABC123"
+                required
+              />
+            </td>
+            <td>
+              <label for="provinces"><strong>Country</strong></label>
+              <select name="provinces" id="provinces">
+                <option value="0" selected>United Kingdom</option>
+                <option value="1">New York</option>
+                <option value="2">Ha Noi</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <button type="submit">SEND ME FREE COFFEE</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>
