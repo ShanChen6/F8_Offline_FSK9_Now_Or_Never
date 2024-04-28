@@ -1,0 +1,20 @@
+.custom-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.custom-list li {
+  margin-bottom: 10px;
+}
+
+li {
+  /* font-weight: 500; */
+  font-size: 24px;
+}
+
+.custom-list li::before {
+  content: "\1F60A";
+  display: inline-block;
+  font-size: 15px;
+  margin-right: 10px;
+}

@@ -1,0 +1,32 @@
+.form-container {
+  background-color: rgb(51, 68, 85);
+  padding: 16px;
+  border-radius: 10px;
+}
+
+h3,
+p {
+  color: white;
+}
+
+span {
+  color: orange;
+}
+
+button {
+  background-color: rgb(248, 219, 53);
+}
+
+.form-container:hover input::placeholder {
+  color: orange;
+  /* background-color: #ddd; */
+}
+
+.form-container:hover input {
+  background-color: #ddd;
+}
+
+.form-container:hover button {
+  background-color: orange;
+  color: #fff;
+}

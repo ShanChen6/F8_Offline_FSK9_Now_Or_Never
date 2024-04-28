@@ -1,0 +1,46 @@
+/* 
+  content: "\201C"; => DẤU NGOẶC KÉP TRÁI
+  content: "\201D"; => DẤU NGOẶC KÉP PHẢI 
+  Content: "\201C\201D"; => DẤU NGOẶC KÉP ĐÔI
+  Content: "\201D\201C"; => DẤU NGOẶC KÉP TRÁI ĐÔI
+  content: "\2018\2019"; => DẤU NGOẶC KÉP ĐƠN (‘ và ’)
+  content: "\201C \2026 \201D"; Dấu ngoặc kép đôi (“ và ”), có chấm câu (ellipsis) giữa
+*/
+
+article {
+  display: block;
+  padding: 20px;
+  margin: auto;
+}
+
+blockquote {
+  position: relative;
+  font-style: italic;
+  padding: 10px;
+  margin: 0;
+  /* background-color: #f9f9f9; */
+}
+
+blockquote::before {
+  content: "\201C";
+  position: absolute;
+  top: 0;
+  left: -15px;
+  font-size: 2em;
+  background-color: rgb(204, 204, 204);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%; /* border radius: bo viền */
+}
+
+blockquote::after {
+  content: "\201D";
+  position: absolute;
+  bottom: 0;
+  right: -15px;
+  font-size: 2em;
+  background-color: rgb(204, 204, 204);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
