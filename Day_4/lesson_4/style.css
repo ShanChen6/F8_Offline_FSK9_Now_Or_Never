@@ -2,9 +2,14 @@ h2 {
   color: rgb(83, 92, 123);
 }
 
+p {
+  color: rgb(102, 105, 119);
+}
+
 p strong {
+  font-weight: 500;
   background-color: rgb(226, 233, 240);
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 p a {
