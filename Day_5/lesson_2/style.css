@@ -1,0 +1,47 @@
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.accordion {
+  margin-top: 10px;
+}
+
+.accordion-item-content {
+  display: none;
+}
+
+.accordion-item-checkbox {
+  display: none;
+}
+
+.accordion-item-title {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(216, 88, 36);
+  font-size: 18px;
+  border-radius: 2px;
+}
+
+.accordion-item-title:hover {
+  text-decoration: underline;
+}
+
+.icon {
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+.accordion-item-checkbox:checked
+  + .accordion-item-title
+  + .accordion-item-content {
+  display: block;
+}
+
+.accordion-item-content p {
+  margin: auto;
+  padding: 10px;
+}
