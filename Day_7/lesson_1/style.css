@@ -1,0 +1,108 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url(../../fonts/fontawesome-free-6.5.2/webfonts/OpenSans-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.625rem;
+  scroll-behavior: smooth;
+}
+
+.container {
+  display: flex;
+  margin: 10px 20px;
+  padding: 0;
+}
+
+.nav .container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  z-index: 999;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  margin: 10px 20px;
+  border-radius: 1px;
+  list-style: none;
+  text-align: center;
+}
+
+.nav__item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  /* margin-left: 10px; */
+  padding: 10px 0;
+  list-style: none;
+  border: 1px solid #ccc;
+}
+
+.nav__item .nav__link p {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0 10px;
+}
+
+.ul__item .ul__link p {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0 10px;
+}
+
+.nav__item a {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  padding: 0 20px;
+  color: #413f3f;
+}
+
+.fa-chevron-down {
+  font-size: 10px;
+}
+
+.ul__item {
+  display: none;
+  list-style-type: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav__item:hover {
+  background: #2da5da;
+}
+
+.nav__item:hover .ul__item {
+  display: block;
+  width: 120%;
+  height: auto;
+  top: 40px;
+  background: white;
+  border: 1px solid #ccc;
+}

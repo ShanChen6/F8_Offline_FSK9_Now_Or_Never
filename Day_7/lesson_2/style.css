@@ -1,0 +1,183 @@
+@font-face {
+  font-family: "Nunito regular";
+  src: url(../../fonts/fontawesome-free-6.5.2/webfonts/Nunito-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 0; */
+  font-family: "Nunito regular", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 14px;
+  background-image: url(http://uiwebsoft.com/justlog/login-one/images/login-bg2.jpg);
+  background-size: contain;
+  overflow: hidden;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  position: relative;
+  overflow-x: hidden;
+  padding: 50px 200px;
+  /* overflow-x: hidden; */
+}
+
+.form-container,
+.intro-container {
+  padding: 20px;
+}
+
+.intro-container {
+  background: #ff574d;
+  padding: 80px 20px;
+  border-radius: 10px 0 0 10px;
+  color: white;
+}
+
+.intro-control__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  margin-bottom: 30px;
+}
+
+.intro-control__inner p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.btn {
+  background: white;
+  color: #ff574d;
+  border: none;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+}
+
+.btn:hover {
+  background-color: #ff8880; /* Màu nền khi hover */
+  color: #ffffff; /* Màu chữ khi hover */
+}
+
+.socials a {
+  text-decoration: none;
+}
+
+.socials a i {
+  width: 30px;
+  height: 30px;
+  background: rgb(218, 92, 79);
+  color: white;
+  /* text-decoration: none; */
+  text-align: center;
+  padding: 5px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.form-container {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 0 10px 10px 0;
+}
+
+.form-control {
+  padding: 30px;
+}
+
+.form-control h2 {
+  text-align: center; /* Căn giữa tiêu đề h2 */
+  margin-bottom: 40px; /* Khoảng cách dưới cho tiêu đề h2 */
+}
+
+span {
+  color: #ff574d;
+  padding: 10px;
+  border-bottom: 2px solid #ff574d;
+}
+
+.form-control input[type="email"],
+.form-control input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-control input[type="email"]:focus,
+.form-control input[type="password"]:focus {
+  border-color: #ff574d;
+}
+
+.remember-forgot {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.remember-forgot label {
+  color: #666;
+}
+
+.remember-forgot a {
+  color: #ff574d;
+  text-decoration: none;
+}
+
+.btn-2 {
+  background-color: #ff574d;
+  color: #fff;
+  width: 100%;
+  border: none;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-2:hover {
+  background-color: #ff7f74;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.register-link a {
+  color: #ff574d;
+  text-decoration: none;
+}
