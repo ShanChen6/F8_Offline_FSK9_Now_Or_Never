@@ -1,0 +1,152 @@
+@font-face {
+  font-family: "Asap";
+  src: url(../../fonts/fontawesome-free-6.5.2/webfonts/Asap-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+body {
+  font-family: "Asap", sans-serif;
+  background: rgb(243, 241, 240);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+h2 {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #333;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  left: 38%;
+  bottom: 50%;
+  width: 100%;
+  height: 1px;
+  background-color: #333;
+  transform: translateY(50%);
+}
+
+.hot-location {
+  width: 88%;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  /* gap: 50px; */
+  padding: 0;
+  margin: 20px 0;
+  position: absolute;
+}
+
+.nav-item {
+  display: inline-block;
+}
+
+.nav-link {
+  display: block;
+  padding: 5px 15px;
+  color: black;
+  background: rgb(228, 228, 228);
+  border: 1px solid transparent;
+  border-radius: 99px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  background-color: rgb(174, 123, 55);
+}
+
+.item-name {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.item-text {
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  font-style: italic;
+}
+
+.location-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 80px;
+}
+
+.location-container {
+  display: grid;
+  height: 450px;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 1rem;
+}
+
+.col-4 {
+  width: 100%;
+  padding: 10px 10px;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.location-container a {
+  text-decoration: none;
+  position: relative;
+  /* padding: 10px 20px; */
+  color: #333;
+}
+
+.card-bg {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+}
+
+.card-bg img {
+  width: 100%;
+  height: 200px;
+  display: block;
+  transition: transform 0.3s ease; /* Add transition effect for image hover */
+}
+
+.card-bg:hover img {
+  transform: scale(1.05); /* Scale up image on hover */
+}
+
+.card-info-title {
+  position: absolute;
+  justify-content: center;
+  width: 350px;
+  top: 20px;
+  left: 10px;
+  color: red;
+  font-weight: bold;
+}
+
+.card-info-text {
+  position: absolute;
+  width: 350px;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-size: 14px;
+}
