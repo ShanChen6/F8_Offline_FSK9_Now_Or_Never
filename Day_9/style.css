@@ -1,0 +1,85 @@
+/* =====================================
+            RESET CSS
+=======================================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+html {
+  padding: 0px;
+  margin: 0 auto;
+}
+
+body {
+  margin: 0px auto;
+  padding: 0px;
+  background-color: var(--bg) !important;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+pre,
+p {
+  margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+}
+
+ul {
+  padding: 0;
+  margin: 0px;
+}
+
+textarea {
+  resize: none !important;
+}
+
+button,
+select {
+  cursor: pointer;
+}
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a {
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  text-decoration: none;
+}
+
+.navbar {
+  background: none;
+}
