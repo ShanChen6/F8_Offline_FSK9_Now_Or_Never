@@ -367,6 +367,10 @@ button:not(:disabled) {
 }
 
 .service__heading {
+  display: flex;
+  flex-flow: column wrap;
+  flex: 0 0 auto;
+  width: 100%;
   text-align: center;
 }
 
