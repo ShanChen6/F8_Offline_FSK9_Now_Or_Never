@@ -1,0 +1,177 @@
+@media screen and (max-width: 1399px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  html {
+    font-size: 12.5px;
+  }
+}
+
+@media screen and (max-width: 835px) {
+  .header {
+    padding: 0;
+  }
+
+  .open-icon {
+    display: block;
+    /* margin-right: 43rem; */
+    font-size: 2.5rem;
+    top: 20px;
+    left: 40px;
+  }
+  .close-icon {
+    display: none;
+    /* margin-right: 43rem; */
+    font-size: 2.5rem;
+    top: 20px;
+    left: 40px;
+  }
+
+  .open-icon {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+
+  #menu-toggle:checked ~ .menu {
+    display: block;
+    /* top: 50px; */
+  }
+
+  .open-icon {
+    display: inline;
+  }
+
+  .close-icon {
+    display: none;
+  }
+
+  #menu-toggle:checked ~ .menu-icon .open-icon {
+    display: none;
+  }
+
+  #menu-toggle:checked ~ .menu-icon .close-icon {
+    display: inline;
+  }
+
+  .menu-icon .open-icon,
+  .menu-icon .close-icon {
+    display: inline-block;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+
+  /* Tạo keyframes cho hiệu ứng xoay */
+  @keyframes rotate-in {
+    from {
+      transform: rotate(-180deg);
+      opacity: 0;
+    }
+    to {
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+  }
+
+  @keyframes rotate-out {
+    from {
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+    to {
+      transform: rotate(180deg);
+      opacity: 0;
+    }
+  }
+
+  /* Hiệu ứng cho biểu tượng mở */
+  #menu-toggle:not(:checked) ~ .menu-icon .open-icon {
+    animation: rotate-in 0.3s forwards;
+  }
+
+  #menu-toggle:checked ~ .menu-icon .open-icon {
+    animation: rotate-out 0.3s forwards;
+  }
+
+  /* Hiệu ứng cho biểu tượng đóng */
+  #menu-toggle:checked ~ .menu-icon .close-icon {
+    animation: rotate-in 0.3s forwards;
+  }
+
+  #menu-toggle:not(:checked) ~ .menu-icon .close-icon {
+    animation: rotate-out 0.3s forwards;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  #menu-toggle:checked ~ .overlay {
+    scale: 30 30;
+  }
+
+  #menu-toggle:checked ~ .menu-nav {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    border-bottom-right-radius: 99px;
+    background: white;
+    transition: scale 1s ease;
+  }
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    border-bottom-right-radius: 99px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+  .navbar__menu {
+    position: absolute;
+    z-index: 2;
+    top: 100px;
+    left: 40px;
+    width: 100px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+  }
+
+  .navbar__menu ul {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 1.2rem;
+  }
+
+  .navbar__menu ul li a {
+    width: 100%;
+    text-align: left;
+    margin: 1rem 0;
+  }
+
+  #menu-toggle:checked ~ .navbar__menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input[type="radio"]:checked + a label {
+    color: #fff;
+    background-color: green;
+    width: 100%;
+  }
+}

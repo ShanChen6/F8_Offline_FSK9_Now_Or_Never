@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: rgb(238, 238, 238);
+}
+
+ul li {
+  list-style: none;
+}
+
+.section {
+  width: 715px;
+  max-width: 100%;
+  margin: 50px auto;
+}
+
+.content {
+  position: absolute;
+  top: 38.5px;
+  left: 0;
+  right: 0;
+  margin-bottom: 20px;
+}
+
+.box {
+  padding: 20px;
+  width: 100%;
+  transition: transform 0.5s, opacity 0.6s, visibility 0.6s;
+  transform-origin: top;
+  background-color: rgb(253, 253, 253);
+  overflow-x: auto;
+}
+
+input[type="radio"]:not(:checked) ~ .content .box {
+  transform: rotateX(-45deg);
+  opacity: 0;
+  visibility: hidden;
+}
+
+input[type="radio"]:checked ~ .content .box {
+  transition-delay: 0.34s;
+  transform: rotateX(0deg);
+}
+
+input[type="radio"]:checked + label,
+input[type="radio"]:hover + label {
+  background-color: rgb(66, 152, 218);
+  color: rgb(251, 252, 252);
+}
+
+label {
+  display: inline-block;
+  padding: 5px 8px;
+  border-bottom: 1px solid rgb(129, 129, 129);
+  text-wrap: nowrap;
+  transition: 0.3s ease;
+  transition-duration: background-color, color;
+}
+
+.section__list label:not(:last-child) {
+  border-right: 1px solid rgb(129, 129, 129);
+}
+
+.section__list {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+  background-color: rgb(251, 252, 252);
+  color: rgb(129, 129, 129);
+}

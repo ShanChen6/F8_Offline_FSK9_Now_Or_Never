@@ -1,0 +1,17 @@
+.container {
+  padding: 300px 100px;
+  width: 500px;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.envelope {
+  width: 0;
+  height: 0;
+  border-top: 100px solid #ca4f42;
+  border-right: 150px solid #e26455;
+  border-left: 150px solid #dc564a;
+  border-bottom: 100px solid #e26455;
+  transition: border-top 0.5s ease;
+}
