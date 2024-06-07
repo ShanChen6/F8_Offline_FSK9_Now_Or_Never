@@ -1,0 +1,385 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input[type="password"],
+input[type="text"],
+input[type="radio"],
+label,
+select {
+  font-family: "Poppins", sans-serif;
+}
+
+label {
+  display: block;
+  margin: 0;
+  color: #3e3f5e;
+  line-height: 1em;
+}
+
+button,
+input[type="password"],
+input[type="text"],
+input[type="radio"],
+select {
+  width: 100%;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+input[type="password"],
+input[type="text"],
+input[type="radio"],
+select {
+  background-color: #fff;
+  border: 1px solid #dedeea;
+  color: #3e3f5e;
+  transition: border-color 0.2s ease-in-out;
+}
+
+input[type="password"]:focus,
+input[type="text"]:focus,
+input[type="radio"]:focus,
+select:focus {
+  border-color: #615dfa;
+}
+
+input[type="password"],
+input[type="text"] {
+  height: 54px;
+  padding: 0 18px;
+}
+
+input[type="password"]::-webkit-input-placeholder,
+input[type="text"]::-webkit-input-placeholder {
+  color: #adafca;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+input[type="password"]::-moz-placeholder,
+input[type="text"]::-moz-placeholder {
+  color: #adafca;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+input[type="password"]:-ms-input-placeholder,
+input[type="text"]:-ms-input-placeholder {
+  color: #adafca;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+input[type="password"]::-ms-input-placeholder,
+input[type="text"]::-ms-input-placeholder {
+  color: #adafca;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+input[type="password"]::placeholder,
+input[type="text"]::placeholder {
+  color: #adafca;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* CSS cho trạng thái ẩn và hiện của form */
+.hidden {
+  display: none;
+}
+
+/* Khi login radio button được chọn, hiển thị form đăng nhập và ẩn form đăng ký */
+#login:checked ~ .landing-form .login-register-form-element:nth-child(1) {
+  display: block;
+}
+
+#login:checked ~ .landing-form .login-register-form-element:nth-child(2) {
+  display: none;
+}
+
+/* Khi register radio button được chọn, hiển thị form đăng ký và ẩn form đăng nhập */
+#register:checked ~ .landing-form .login-register-form-element:nth-child(1) {
+  display: none;
+}
+
+#register:checked ~ .landing-form .login-register-form-element:nth-child(2) {
+  display: block;
+}
+
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("./images/landing-background.jpg") no-repeat center
+    center/cover;
+  position: relative;
+}
+
+.landing-info,
+.landing-form {
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.landing-info {
+  flex: 1;
+  max-width: 500px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.logo img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.landing-info-pretitle {
+  font-size: 24px;
+  color: #888;
+}
+
+.landing-info-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #333;
+  margin: 20px 0;
+}
+
+.landing-info-text {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.tab-switch {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tab-switch-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background: #007bff;
+  color: #fff;
+}
+
+.tab-switch-button:hover {
+  background: #0056b3;
+}
+
+/* Form Section */
+.landing-form {
+  flex: 1;
+  max-width: 500px;
+  margin-left: 20px;
+}
+
+.form-box {
+  position: relative;
+  padding: 40px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.form-box-decoration {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100px;
+}
+
+.form-box-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-item {
+  width: 100%;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-input label {
+  font-size: 14px;
+  color: #555;
+}
+
+.form-input input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.checkbox-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox-wrap input {
+  width: auto;
+}
+
+.checkbox-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button.medium {
+  width: 100%;
+}
+
+.button.secondary {
+  background: #007bff;
+  color: #fff;
+}
+
+.button.secondary:hover {
+  background: #0056b3;
+}
+
+.button.primary {
+  background: #28a745;
+  color: #fff;
+}
+
+.button.primary:hover {
+  background: #218838;
+}
+
+.lined-text {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 14px;
+  color: #888;
+  position: relative;
+}
+
+.lined-text:before,
+.lined-text:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: #ddd;
+}
+
+.lined-text:before {
+  left: 0;
+}
+
+.lined-text:after {
+  right: 0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-link {
+  font-size: 20px;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.social-link.facebook {
+  background: #3b5998;
+}
+
+.social-link.twitter {
+  background: #00acee;
+}
+
+.social-link.twitch {
+  background: #6441a5;
+}
+
+.social-link.youtube {
+  background: #ff0000;
+}
+
+.form-text {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.form-text a {
+  color: #007bff;
+}
+
+.form-text a:hover {
+  text-decoration: underline;
+}

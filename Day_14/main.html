@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="breakpoint.css" />
+  </head>
+  <body>
+    <div class="homepage" id="homepage">
+      <!-- HEADER -->
+      <header class="header">
+        <!-- Hidden Checkbox for Menu Toggle -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" hidden />
+        <!-- Menu Button -->
+        <label for="menu-toggle" class="menu-btn d-md-none">
+          <i class="fa-solid fa-bars"></i>
+        </label>
+        <!-- Logo -->
+        <div id="logo" class="header__logo">
+          <a href="#home" class="header__logo--link">S<span>TRAVEL</span></a>
+        </div>
+        <!-- Navigation Menu -->
+        <nav class="navbar">
+          <a href="#home" class="nav__menu--link">Home</a>
+          <a href="#about" class="nav__menu--link">About</a>
+          <a href="#destination" class="nav__menu--link">Destination</a>
+          <a href="#services" class="nav__menu--link">Services</a>
+          <a href="#gallery" class="nav__menu--link">Gallery</a>
+          <a href="#blogs" class="nav__menu--link">Blogs</a>
+        </nav>
+        <div class="toggle-dark-mode">
+          <!-- Toggle Light/Dark Mode -->
+          <div class="dark-icon">
+            <i class="fa-solid fa-moon"></i>
+          </div>
+          <!-- Additional Link -->
+          <div class="book-form">
+            <a href="#book-form" class="btn-book">Đặt Ngay</a>
+          </div>
+        </div>
+      </header>
+      <section class="home" id="home">
+        <div class="content">
+          <span class="country">mumbai</span>
+          <h3 class="content-country"></h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+            expedita delectus. Expedita quod harum est error officiis, rem esse
+            labore sunt aperiam vero assumenda dignissimos culpa, adipisci quo
+            deleniti molestiae?
+          </p>
+          <a href="#">Read More</a>
+        </div>
+      </section>
+      <section class="book-form" id="book-form">
+        <form action="">
+          <h1 class="packages">Ưu đãi 30.000.000 cho 5người/3ngày</h1>
+          <div class="btn-book"></div>
+        </form>
+      </section>
+      <section class="about" id="about"></section>
+      <section class="destination" id="destination"></section>
+      <section class="services" id="services"></section>
+      <section class="gallery" id="gallery"></section>
+      <section class="review" id="review"></section>
+      <section class="contact" id="contact"></section>
+      <section class="blogs" id="blogs"></section>
+      <div class="banner"></div>
+      <footer class="footer"></footer>
+      <div class="credit"></div>
+    </div>
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script> -->
+  </body>
+</html>

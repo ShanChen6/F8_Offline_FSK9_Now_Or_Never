@@ -98,6 +98,10 @@ html {
   background: #2da5da;
 }
 
+/* .nav__item:hover .ul__item {
+  background-color: #2da5da;
+} */
+
 .nav__item:hover .ul__item {
   display: block;
   width: 120%;

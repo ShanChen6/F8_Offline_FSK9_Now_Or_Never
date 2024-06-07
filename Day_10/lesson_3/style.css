@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  /* border: 0; */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column wrap;
+  margin-bottom: 20px;
+}
+
+.form-header h2 {
+  margin: 0 0 10px;
+  font-size: 24px;
+}
+
+.form-header p {
+  margin: 0 0 20px;
+  color: #777;
+}
+
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-group,
+.input-wrapper {
+  position: relative;
+  flex: 1;
+  min-width: calc(50% - 10px);
+}
+
+.form-control,
+#message,
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #f9f9f9;
+}
+
+.form-control:focus,
+#message:focus,
+select:focus {
+  outline: none;
+  border-color: #007bff;
+  background: #fff;
+}
+
+.form-label,
+label[for="message"] {
+  position: absolute;
+  left: 12px;
+  top: 10px;
+  background: white;
+  padding: 0 5px;
+  transition: 0.3s;
+  pointer-events: none;
+  color: #aaa;
+  font-size: 16px;
+}
+
+.form-control:not(:placeholder-shown) + .form-label,
+.form-control:focus + .form-label,
+#message:not(:placeholder-shown) + label[for="message"],
+#message:focus + label[for="message"] {
+  top: -10px;
+  font-size: 12px;
+  color: #007bff;
+}
+
+.input-wrapper {
+  width: 100%;
+}
+
+.btn {
+  /* width: 100%; */
+  padding: 10px 20px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 9999px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #0056b3;
+}

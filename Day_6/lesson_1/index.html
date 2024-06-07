@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="../../fonts/fontawesome-free-6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <footer class="container">
+      <div class="footer-content">
+        <h2>Hey There</h2>
+        <p>
+          <span>We'd like to hear from you. </span>Lorem ipsum dolor, sit amet
+          consectetur adipisicing elit. Quae, aliquid, officiis quia rem
+          recusandae culpa pariatur
+        </p>
+        <form class="feedback-form">
+          <div class="form-group form-group-bg">
+            <input type="text" name="name" placeholder="Your name" required />
+            <div class="icon-wrap icon">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="icon-wrap">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+          </div>
+          <div class="form-group form-group-bg">
+            <input
+              type="email"
+              name="email"
+              placeholder="your@domain.com"
+              required
+            />
+            <div class="icon-wrap icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="icon-wrap">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+          </div>
+          <div class="form-group form-group-bg">
+            <input
+              type="number"
+              name="number-phone"
+              placeholder="+84 397 188 885"
+              required
+            />
+            <div class="icon-wrap icon">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+          </div>
+          <div class="form-group form-group-bg">
+            <select name="subject" id="subject">
+              <option value="0">Subject</option>
+              <option value="1">option 1</option>
+              <option value="2">option 2</option>
+              <option value="3">option 3</option>
+            </select>
+            <div class="icon-wrap icon">
+              <i class="fa-solid fa-book"></i>
+            </div>
+          </div>
+          <div class="form-group form-group-bg">
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Message"
+              required
+            ></textarea>
+            <div class="icon-wrap icon">
+              <i class="fa-solid fa-comment"></i>
+            </div>
+            <div class="icon-wrap">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+          </div>
+          <div class="submit-form">
+            <label>
+              <input type="checkbox" value="message" />Send me a copy of this
+              message
+            </label>
+            <button type="button" class="btn">SEND</button>
+          </div>
+        </form>
+      </div>
+    </footer>
+  </body>
+</html>

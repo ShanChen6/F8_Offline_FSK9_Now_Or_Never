@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(../../fonts/fontawesome-free-6.5.2/webfonts/Roboto-Regular.ttf);
+}
+
+body {
+  background: #ebf5fe;
+  font-family: "Roboto" sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.services {
+  display: grid;
+  height: 450px;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 1rem;
+}
+
+.services-container {
+  flex: 1 1 30%;
+  border: 1px solid transparent;
+  width: 350px;
+  background: white;
+  padding: 10px 20px;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.header,
+.main,
+.footer {
+  text-align: center;
+}
+
+.main {
+  padding: 20px;
+}
+
+.color-1:hover {
+  border: 2px solid rgb(228, 96, 116);
+}

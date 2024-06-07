@@ -1,0 +1,36 @@
+/* `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media screen and (max-width: 1399.98px) {
+  .header {
+    padding: 1.5rem 5%;
+  }
+}
+
+/* `xl` applies to large devices (desktops, less than 1200px) */
+@media screen and (max-width: 1199.98px) {
+  .header {
+    padding: 1.5rem 3%;
+  }
+}
+
+/* `lg` applies to medium devices (tablets, less than 992px) */
+@media screen and (max-width: 991.98px) {
+  .header {
+    padding: 1.5rem 2%;
+  }
+}
+
+/* `md` applies to small devices (landscape phones, less than 768px) */
+@media screen and (max-width: 767.98px) {
+  .header {
+    padding: 1rem 1%;
+  }
+}
+
+/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media screen and (max-width: 575.98px) {
+  .header {
+    padding: 0.5rem 1%;
+  }
+}
+
+/* `xs` returns only a ruleset and no media query */
