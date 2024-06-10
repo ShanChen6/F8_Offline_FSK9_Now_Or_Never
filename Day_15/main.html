@@ -4,45 +4,211 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./Css/style.css" />
+    <link rel="stylesheet" href="Css/grid.css" />
   </head>
   <body>
     <div class="container">
-      <aside class="sidebar">
-        <div class="logo">
-          <img src="./Buoi13-UI/Group 1.png" alt="logo" />
+      <div class="row">
+        <aside class="sidebar col-xl-2 col-lg-2 col-md-2">
+          <div class="logo">
+            <a href="#">
+              <img src="./Buoi13-UI/Group 1.png" alt="logo" />
+            </a>
+            <!-- <img src="./Buoi13-UI/Group 1.png" alt="logo" /> -->
+          </div>
+          <h2 class="categories">Explore</h2>
+          <ul>
+            <li>
+              <a href="#" class="category-link"
+                ><img src="./Buoi13-UI/image 15.svg" alt="new-in" /> New In</a
+              >
+            </li>
+            <li>
+              <a href="#" class="category-link"
+                ><img src="./Buoi13-UI/image 9.svg" alt="clothing" />
+                Clothing</a
+              >
+            </li>
+            <li>
+              <a href="#" class="category-link icon-3"
+                ><img src="./Buoi13-UI/image 8.svg" alt="shoes" /> Shoes</a
+              >
+            </li>
+            <li>
+              <a href="#" class="category-link icon-4">
+                <img src="./Buoi13-UI/image 7.svg" alt="accessories" />
+                Accessories</a
+              >
+            </li>
+            <li>
+              <a href="#" class="category-link icon-5">
+                <img src="./Buoi13-UI/image 6.svg" alt="activewear" />
+                Activewear</a
+              >
+            </li>
+            <li>
+              <a href="#" class="category-link icon-6">
+                <img src="./Buoi13-UI/image 4.svg" alt="gifts-living" />
+                Gifts & Living</a
+              >
+            </li>
+            <li>
+              <a href="#" class="category-link icon-7">
+                <img src="./Buoi13-UI/image 5.svg" alt="inspiration" />
+                Inspiration</a
+              >
+            </li>
+          </ul>
+          <input
+            type="checkbox"
+            id="support-toggle"
+            class="support-toggle"
+            hidden
+          />
+          <label for="support-toggle" class="sidebar__bottom">
+            Help Center
+          </label>
+          <!-- <div class="sidebar__bottom">Help Center</div> -->
+          <div class="support-box">
+            <a href="#" target="_blank" class="support-link">
+              <i class="fa-brands fa-linkedin"></i> Linked in
+            </a>
+            <a href="#" target="_blank" class="support-link">
+              <i class="fa-brands fa-github"></i> Github
+            </a>
+            <a href="#" target="_blank" class="support-link">
+              <i class="fa-brands fa-facebook"></i> Facebook
+            </a>
+          </div>
+        </aside>
+        <div class="content col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12">
+          <header class="header">
+            <div class="search">
+              <input type="text" placeholder="Search store" />
+              <!-- <button type="submit">Search</button> -->
+            </div>
+            <nav class="navbar__menu">
+              <ul>
+                <li>
+                  <a href="#" class="nav-link">Products</a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link">Story</a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link">Manufacturing</a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link">Packing</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__icon">
+              <div class="bar-toggle"></div>
+              <div class="cart-icon"></div>
+              <div class="user-icon"></div>
+            </div>
+          </header>
+          <main class="main__content">
+            <div class="container">
+              <div class="row">
+                <div
+                  class="content-1 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12"
+                >
+                  <div class="container">
+                    <div class="row">
+                      <div
+                        class="box-1 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"
+                      >
+                        <a href="#">
+                          <img src="./Buoi13-UI/W1.jpg" alt="box-1" />
+                        </a>
+                      </div>
+                      <div
+                        class="box-2 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"
+                      >
+                        <a href="#">
+                          <img src="./Buoi13-UI/W2.jpg" alt="box-2" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="content-2 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12"
+                >
+                  <div class="container">
+                    <div class="row">
+                      <div
+                        class="box-3 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6"
+                      >
+                        <a href="#">
+                          <img src="./Buoi13-UI/W3.jpg" alt="box-3" />
+                        </a>
+                      </div>
+                      <div
+                        class="box-4 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6"
+                      >
+                        <a href="#">
+                          <img src="./Buoi13-UI/W4.jpg" alt="box-4" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="content-3 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12"
+                >
+                  <div class="container">
+                    <div class="row">
+                      <div
+                        class="box-7 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6"
+                      >
+                        <a href="#">
+                          <img src="./Buoi13-UI/W7.jpg" alt="box-7" />
+                        </a>
+                      </div>
+                      <div
+                        class="box-8 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6"
+                      >
+                        <a href="#">
+                          <img src="./Buoi13-UI/W8.jpg" alt="box-8" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="content-4 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12"
+                >
+                  <div class="container">
+                    <div class="row">
+                      <div
+                        class="box-5 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"
+                      >
+                        <a href="#">
+                          <img src="./Buoi13-UI/W5.jpg" alt="box-5" />
+                        </a>
+                      </div>
+                      <div
+                        class="box-6 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"
+                      >
+                        <a href="#">
+                          <img src="./Buoi13-UI/W6.jpg" alt="box-6" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
         </div>
-        <h2 class="categories">Explore</h2>
-        <ul>
-          <li>
-            <a href="#">New In</a>
-          </li>
-          <li>
-            <a href="#">New In</a>
-          </li>
-          <li>
-            <a href="#">New In</a>
-          </li>
-          <li>
-            <a href="#">New In</a>
-          </li>
-          <li>
-            <a href="#">New In</a>
-          </li>
-          <li>
-            <a href="#">New In</a>
-          </li>
-          <li>
-            <a href="#">New In</a>
-          </li>
-        </ul>
-        <div class="sidebar__bottom">Help Center</div>
-      </aside>
-      <div class="content">
-        <header class="header">
-            
-        </header>
-        <main class="main__content"></main>
       </div>
     </div>
   </body>

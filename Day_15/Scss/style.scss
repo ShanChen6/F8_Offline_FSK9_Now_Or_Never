@@ -1,0 +1,238 @@
+// Variables
+$primary-color: #000000;
+$secondary-color: #777;
+$hover-color: #F4DE4D;
+$background-color: #FFFFFFCC;
+$font-family: 'Poppins', sans-serif;
+$font-size: 16px;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap');
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    font-family: $font-family;
+    font-size: $font-size;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: $background-color;
+}
+
+// Sidebar
+.sidebar {
+    position: relative;
+    background-color: $background-color;
+    color: $primary-color;
+    padding: 20px;
+  
+    .logo {
+      a {
+        img {
+          max-width: 50%;
+          margin-bottom: 20px;
+        }
+      }
+    }
+    
+    .categories {
+      font-size: 1.5rem;
+      margin-top: 0;
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+  
+      li {
+        margin: 10px 0;
+  
+        .category-link {
+          @include flex-center;
+          justify-content: flex-start;
+          color: $primary-color;
+          text-decoration: none;
+          font-size: 1rem;
+          gap: 10px;
+  
+          &:hover {
+            color: $hover-color;
+          }
+        }
+      }
+    }
+
+    .support-toggle {
+        display: none;
+    
+        &:checked + .sidebar__bottom + .support-box {
+          display: block;
+        }
+      }
+  
+    .sidebar__bottom {
+        position: fixed;
+        bottom: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 20px;
+        text-align: center;
+        cursor: pointer;
+
+        &::before {
+            content: '\f059'; 
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            margin-right: 8px;
+        }
+    }
+    .support-box {
+        display: none;
+        background-color: $hover-color;
+        color: $primary-color;
+        border: 1px solid $secondary-color;
+        border-radius: 5px;
+        padding: 10px;
+        position: fixed;
+        bottom: 70px;
+        left: 150px;
+        width: 150px;
+        height: 120px;
+        z-index: 999;
+
+        a {
+            display: block;
+            text-decoration: none;
+            color: $primary-color;
+            padding: 5px 10px;
+            
+            &:hover {
+              color: $secondary-color;
+            }
+        }
+    }
+}
+  
+  // Header
+  .header {
+    background-color: $background-color;
+    // margin: 10px;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .search {
+      position: relative;
+
+      input {
+        font-size: 1rem;
+        padding: 15px;
+        width: 200px;
+        opacity: 0.2;
+        border: none;
+        outline: none;
+      }
+      &::before {
+        content: "\f002"; 
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: relative;
+        left: 5px;
+        top: 50%;
+      }
+    }
+    .navbar__menu {
+      ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        margin: 0;
+  
+        li {
+          margin: 0 10px;
+  
+          .nav-link {
+            text-decoration: none;
+            color: $primary-color;
+            font-size: 1rem;
+            font-weight: 600;
+  
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  
+    .header__icon {
+      display: flex;
+  
+      .cart-icon,
+      .user-icon,
+      .bar-toggle {
+        width: 24px;
+        height: 24px;
+        margin-left: 10px;
+
+        &::before {
+          content: "\f07a"; 
+          font-family: "Font Awesome 6 Free";
+          font-weight: 900;
+          position: relative;
+          transform: translateY(-50%);
+        }
+      }
+      .bar-toggle::before {
+        content: '\f0c9'; 
+        display: none;
+      }
+      .user-icon::before {
+        content: "\f007"; 
+      }
+    }
+  }
+  
+  // Main Content
+  .main__content {
+    padding: 20px;
+  
+    .box-1, .box-2, .box-3, .box-4, .box-5, .box-6, .box-7, .box-8 {
+      margin-bottom: 20px;
+    }
+  
+    img {
+      display: block;
+      font-size: 1rem;
+      max-width: 100%;
+      cursor: pointer;
+    }
+  }
+  
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: none; // Ẩn sidebar trên màn hình nhỏ hơn 768px
+  }
+
+  .header {
+    margin: 5px; // Giảm margin của header trên màn hình nhỏ hơn 768px
+    padding: 10px;
+    
+    .navbar__menu {
+      display: none; // Ẩn menu navbar trên màn hình nhỏ hơn 768px
+    }
+    
+    .header__icon {
+      .bar-toggle {
+        display: block; // Hiển thị nút toggle trên màn hình nhỏ hơn 768px
+      }
+    }
+  }
+}
