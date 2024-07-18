@@ -1,18 +1,17 @@
 function sum() {
   var numbers = Array.prototype.slice.call(arguments);
+  var total = 0;
 
   for (var i = 0; i < numbers.length; i++) {
-    if (typeof numbers[i] !== "number") {
-      return "Error: All arguments must be numbers";
+    if (typeof numbers[i] !== "number" || isNaN(numbers[i])) {
+      return "Error: All arguments must be valid numbers";
     }
+    total += numbers[i];
   }
-
-  var total = numbers.reduce(function (total, num) {
-    return total + num;
-  }, 0);
 
   return total;
 }
 
 console.log(sum(1, 2, 3, 4));
 console.log(sum(1, "2", 3));
+console.log(sum(1, NaN, 3));
