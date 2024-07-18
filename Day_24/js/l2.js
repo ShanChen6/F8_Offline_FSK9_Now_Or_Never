@@ -1,13 +1,13 @@
-Number.prototype.getCurrency = function (currency) {
-  return this.toLocaleString() + " " + currency;
+Number.prototype.getCurrency = function (currency, locale = "en-EN") {
+  return this.toLocaleString(locale) + " " + currency;
 };
 
-String.prototype.getCurrency = function (currency) {
+String.prototype.getCurrency = function (currency, locale = "en-EN") {
   var number = parseFloat(this);
   if (isNaN(number)) {
     return "Error: Invalid number";
   }
-  return number.toLocaleString() + " " + currency;
+  return number.toLocaleString(locale) + " " + currency;
 };
 
 var price1 = 12000;
