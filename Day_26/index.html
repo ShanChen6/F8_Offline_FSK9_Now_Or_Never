@@ -4,8 +4,78 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: none;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .form-container {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        width: 300px;
+        text-align: center;
+      }
+
+      .form-container input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+      }
+
+      .form-container button {
+        padding: 10px;
+        width: 100%;
+      }
+
+      .form-container a {
+        display: block;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
   </head>
   <body>
+    <a id="loginLink" href="#">Đăng Nhập</a>
+    <div id="overlay" class="overlay">
+      <div id="loginForm" class="form-container">
+        <h2>Đăng nhập</h2>
+        <input type="text" id="loginUsername" placeholder="Username" required />
+        <input
+          type="password"
+          id="loginPassword"
+          placeholder="Password"
+          required
+        />
+        <button onclick="login()">Đăng nhập</button>
+        <a onclick="showRegisterForm()">Đăng ký</a>
+      </div>
+      <div id="registerForm" class="form-container" style="display: none">
+        <h2>Đăng ký</h2>
+        <input type="text" id="regUsername" placeholder="Username" required />
+        <input
+          type="password"
+          id="regPassword"
+          placeholder="Password"
+          required
+        />
+        <button onclick="register()">Đăng ký</button>
+        <a onclick="showLoginForm()">Đăng nhập</a>
+      </div>
+    </div>
+    <div id="message"></div>
     <script src="./js/l1.js"></script>
   </body>
 </html>
