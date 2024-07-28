@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
 body {
   font-family: Arial, sans-serif;
   display: flex;
@@ -5,20 +11,21 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #f0f0f0;
+  background-color: #8758ff;
 }
 
 .container {
-  background-color: #fff;
+  background-color: #1a1a40;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  width: 400px;
   text-align: center;
 }
 
 h1 {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  color: #fff;
 }
 
 .todoForm {
@@ -29,23 +36,31 @@ h1 {
 input {
   flex: 1;
   padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  margin-right: 10px;
+  border: 1px solid #8758ff;
+  color: #fff;
+}
+
+input:focus {
+  border-color: #8758ff;
+  outline: none;
+}
+
+input[type="text"] {
+  background-color: #1a1a40;
 }
 
 button {
   padding: 10px 15px;
-  border: none;
-  background-color: #28a745;
+  border: 1px solid #8758ff;
+  background-color: #8758ff;
   color: #fff;
-  border-radius: 4px;
+  /* border-radius: 0 4px 4px 0; */
   cursor: pointer;
 }
 
-button:hover {
+/* button:hover {
   background-color: #218838;
-}
+} */
 
 ul {
   list-style-type: none;
@@ -54,11 +69,12 @@ ul {
 }
 
 li {
-  background-color: #f9f9f9;
-  padding: 10px;
-  border: 1px solid #ddd;
+  background-color: #8758ff;
+  color: #fff;
+  border: 1px solid #8758ff;
+  padding: 5px;
   border-radius: 4px;
-  margin-bottom: 10px;
+  margin: 20px 0 20px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -70,7 +86,7 @@ li.completed .task-text {
 
 li .icons {
   display: flex;
-  gap: 10px;
+  /* gap: 2px; */
 }
 
 li .icons button {
@@ -81,17 +97,18 @@ li .icons button {
 
 li .icons button .fa {
   font-size: 16px;
-  color: #333;
+  color: #fff;
 }
 
-li .icons button .fa:hover {
-  color: #dc3545; /* Color when hovered */
-}
+/* li .icons button .fa:hover {
+  color: #dc3545; /* Color when hovered *
+} */
 
 .edit-input {
   flex: 1;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #8758ff;
+  color: #fff;
   border-radius: 4px;
   margin-right: 10px;
 }
