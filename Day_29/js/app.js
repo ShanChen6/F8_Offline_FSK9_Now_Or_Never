@@ -8,7 +8,6 @@ var active = 0;
 var lengthItem = items.length - 1;
 var startX = 0;
 var isDragging = false;
-var threshold = 100;
 
 next.onclick = function () {
   if (active + 1 > lengthItem) {
@@ -58,12 +57,14 @@ list.addEventListener("mousedown", (e) => {
   isDragging = true;
   list.style.transition = "none";
   clearInterval(refreshSlider);
+  e.preventDefault();
 });
 
 list.addEventListener("mousemove", (e) => {
   if (!isDragging) return;
   const diffX = e.pageX - startX;
   list.style.left = -items[active].offsetLeft + diffX + "px";
+  e.preventDefault();
 });
 
 list.addEventListener("mouseup", (e) => {
@@ -79,6 +80,7 @@ list.addEventListener("mouseup", (e) => {
 
   reloadSlider();
   list.style.transition = "1s";
+  e.preventDefault();
 });
 
 list.addEventListener("mouseleave", () => {
@@ -86,4 +88,5 @@ list.addEventListener("mouseleave", () => {
   isDragging = false;
   reloadSlider();
   list.style.transition = "1s";
+  e.preventDefault();
 });
