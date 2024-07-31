@@ -6,6 +6,9 @@ var next = document.getElementById("next");
 
 var active = 0;
 var lengthItem = items.length - 1;
+var startX = 0;
+var isDragging = false;
+var threshold = 100;
 
 next.onclick = function () {
   if (active + 1 > lengthItem) {
@@ -47,4 +50,40 @@ dots.forEach((li, key) => {
     active = key;
     reloadSlider();
   });
+});
+
+// Handle drag events
+list.addEventListener("mousedown", (e) => {
+  startX = e.pageX;
+  isDragging = true;
+  list.style.transition = "none";
+  clearInterval(refreshSlider);
+});
+
+list.addEventListener("mousemove", (e) => {
+  if (!isDragging) return;
+  const diffX = e.pageX - startX;
+  list.style.left = -items[active].offsetLeft + diffX + "px";
+});
+
+list.addEventListener("mouseup", (e) => {
+  if (!isDragging) return;
+  isDragging = false;
+  const diffX = e.pageX - startX;
+
+  if (diffX > 100 && active > 0) {
+    active--;
+  } else if (diffX < -100 && active < lengthItem) {
+    active++;
+  }
+
+  reloadSlider();
+  list.style.transition = "1s";
+});
+
+list.addEventListener("mouseleave", () => {
+  if (!isDragging) return;
+  isDragging = false;
+  reloadSlider();
+  list.style.transition = "1s";
 });
