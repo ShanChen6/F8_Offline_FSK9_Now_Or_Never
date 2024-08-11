@@ -11,21 +11,33 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <div class="play-btn">
+      <i class="fa-solid fa-play"></i>
+    </div>
     <div class="player">
-      <div class="play-action">
-        <i class="fa-solid fa-play"></i>
-      </div>
-      <div class="play-timer">
-        <span>00:00</span>
-        <div class="progress-bar">
-          <div class="progress">
-            <span></span>
-          </div>
+      <span>00:00</span>
+      <div class="progress-bar">
+        <div class="progress">
+          <span class="timer">00:00</span>
         </div>
-        <span>00:00</span>
+      </div>
+      <span>00:00</span>
+    </div>
+    <div class="open-karaoke">
+      <button type="button">Karaoke</button>
+    </div>
+    <div class="karaoke">
+      <div class="container">
+        <div class="karaoke-header">
+          <h2>Karaoke</h2>
+          <span class="close">
+            <i class="fa-angle-down fa-solid"></i>
+          </span>
+        </div>
+        <div class="karaoke-inner"></div>
       </div>
     </div>
-    <audio src="./mp3/thich-em-the-ma.mp3" controls></audio>
+    <audio src="./mp3/thich-em-the-ma.mp3" class="audio"></audio>
     <script src="./js/main.js"></script>
   </body>
 </html>
