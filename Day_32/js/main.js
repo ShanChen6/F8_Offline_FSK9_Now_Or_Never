@@ -2841,10 +2841,12 @@ progressDot.addEventListener("mousedown", function (e) {
   }
 });
 
+var clientXSpan = 0;
+var offsetLeft = 0;
+
 document.addEventListener("mousemove", function (e) {
   if (isDrag) {
     var space = e.clientX - initialClientX;
-    // console.log(space);
     rate = (space * 100) / progressBarWidth + initalRate;
     if (rate < 0) {
       rate = 0;
