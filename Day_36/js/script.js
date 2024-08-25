@@ -1,31 +1,60 @@
-var message = document.querySelector("#message");
+// script.js
+import { handleResult } from "./handle.js";
 
-var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
-var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
+document.addEventListener("DOMContentLoaded", function () {
+  const actionElement = document.querySelector(".action");
+  const btnElement = document.querySelector(".btn");
 
-var grammar = "#JSGF V1.0;";
+  const SpeechRecognition =
+    window.SpeechRecognition || window.webkitSpeechRecognition;
+  const recognition = new SpeechRecognition();
+  recognition.lang = "vi-VN";
 
-var recognition = new SpeechRecognition();
-var speechRecognitionList = new SpeechGrammarList();
-speechRecognitionList.addFromString(grammar, 1);
-recognition.grammars = speechRecognitionList;
-recognition.lang = "vi-VN";
-recognition.interimResults = false;
+  const handleSearch = () => {
+    // Cập nhật thông báo khi người dùng click vào nút
+    actionElement.textContent = "Hãy nói nội dung bạn cần tìm kiếm";
+    actionElement.className = "action"; // Reset class
 
-recognition.onresult = function (event) {
-  var lastResult = event.results.length - 1;
-  var content = event.results[lastResult][0].transcript;
-  message.textContent = "Voice Input: " + content + ".";
-};
+    recognition.start(); // Bắt đầu nhận diện giọng nói
 
-recognition.onspeechend = function () {
-  recognition.stop();
-};
+    recognition.onstart = function () {
+      actionElement.textContent = "Hãy nói nội dung bạn muốn";
+    };
 
-recognition.onerror = function (event) {
-  message.textContent = "Error occurred in recognition: " + event.error;
-};
+    recognition.onspeechend = function () {
+      recognition.stop();
+    };
 
-document.querySelector("#btnTalk").addEventListener("click", function () {
-  recognition.start();
+    recognition.onresult = function (event) {
+      actionElement.textContent = "Đã nói xong. Hy vọng kết quả như ý bạn";
+      actionElement.className = "action success";
+
+      const transcript = event.results[0][0].transcript;
+      setTimeout(() => {
+        const status = handleResult(transcript.toLowerCase());
+        if (status) {
+          // Nếu thực hiện thành công, sẽ chuyển hướng trang web
+          // Không cần làm gì thêm vì handleResult() đã chuyển hướng
+        } else {
+          // Nếu không thực hiện được, thông báo lỗi và giữ nguyên giao diện
+          actionElement.textContent =
+            "Không thực hiện được yêu cầu. Hãy thử lại.";
+          actionElement.className = "action";
+          btnElement.disabled = false; // Đảm bảo nút không bị vô hiệu hóa
+        }
+      }, 1000);
+    };
+
+    recognition.onerror = function () {
+      actionElement.textContent = "Có lỗi xảy ra, vui lòng thử lại.";
+      actionElement.className = "action"; // Reset class
+      btnElement.disabled = false; // Đảm bảo nút không bị vô hiệu hóa
+    };
+
+    // Trong trường hợp bắt đầu nhận diện, nút có thể tạm thời bị vô hiệu hóa
+    btnElement.disabled = true;
+  };
+
+  // Gắn sự kiện click cho nút
+  btnElement.addEventListener("click", handleSearch);
 });
