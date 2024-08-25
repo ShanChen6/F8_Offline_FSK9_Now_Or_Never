@@ -1,4 +1,3 @@
-// script.js
 import { handleResult } from "./handle.js";
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -13,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const handleSearch = () => {
     // Cập nhật thông báo khi người dùng click vào nút
     actionElement.textContent = "Hãy nói nội dung bạn cần tìm kiếm";
-    actionElement.className = "action"; // Reset class
+    actionElement.className = "action";
 
     recognition.start(); // Bắt đầu nhận diện giọng nói
 
@@ -34,21 +33,19 @@ document.addEventListener("DOMContentLoaded", function () {
         const status = handleResult(transcript.toLowerCase());
         if (status) {
           // Nếu thực hiện thành công, sẽ chuyển hướng trang web
-          // Không cần làm gì thêm vì handleResult() đã chuyển hướng
         } else {
-          // Nếu không thực hiện được, thông báo lỗi và giữ nguyên giao diện
           actionElement.textContent =
             "Không thực hiện được yêu cầu. Hãy thử lại.";
           actionElement.className = "action";
-          btnElement.disabled = false; // Đảm bảo nút không bị vô hiệu hóa
+          btnElement.disabled = false;
         }
       }, 1000);
     };
 
     recognition.onerror = function () {
       actionElement.textContent = "Có lỗi xảy ra, vui lòng thử lại.";
-      actionElement.className = "action"; // Reset class
-      btnElement.disabled = false; // Đảm bảo nút không bị vô hiệu hóa
+      actionElement.className = "action";
+      btnElement.disabled = false;
     };
 
     // Trong trường hợp bắt đầu nhận diện, nút có thể tạm thời bị vô hiệu hóa
