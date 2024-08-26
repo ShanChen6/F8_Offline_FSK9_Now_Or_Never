@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(() => {
         const status = handleResult(transcript.toLowerCase());
         if (status) {
+          btnElement.disabled = false;
           // Nếu thực hiện thành công, sẽ chuyển hướng trang web
         } else {
           actionElement.textContent =
