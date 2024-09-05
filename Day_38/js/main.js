@@ -1,9 +1,16 @@
 let page = 1;
+const limit = 5;
+const maxPosts = 100;
 const postContainer = document.getElementById("post-container");
 const loading = document.getElementById("loading");
-const limit = 5;
+let totalLoadedPosts = 0;
 
 async function loadPosts() {
+  if (totalLoadedPosts >= maxPosts) {
+    loading.textContent = "No more posts to load";
+    return;
+  }
+
   loading.style.display = "block";
 
   try {
@@ -12,7 +19,30 @@ async function loadPosts() {
     );
     const data = await response.json();
 
-    data.forEach((post) => {
+    totalLoadedPosts += data.length;
+
+    appendPostsInBatches(data);
+
+    if (data.length === 0 || totalLoadedPosts >= maxPosts) {
+      loading.textContent = "No more posts to load";
+      window.removeEventListener("scroll", handleScroll); // Dừng lắng nghe sự kiện cuộn
+    } else {
+      page++;
+    }
+  } catch (error) {
+    console.error("Error loading posts:", error);
+  } finally {
+    loading.style.display = "none";
+  }
+}
+
+function appendPostsInBatches(posts, batchSize = 5) {
+  let batchIndex = 0;
+
+  function renderBatch() {
+    const batch = posts.slice(batchIndex, batchIndex + batchSize);
+
+    batch.forEach((post) => {
       const postElement = document.createElement("div");
       postElement.className = "post";
       postElement.innerHTML = `
@@ -22,22 +52,22 @@ async function loadPosts() {
       postContainer.appendChild(postElement);
     });
 
-    if (data.length > 0) {
-      page++;
-    } else {
-      loading.textContent = "No more posts to load";
+    batchIndex += batchSize;
+
+    if (batchIndex < posts.length) {
+      setTimeout(renderBatch, 100);
     }
-  } catch (error) {
-    console.error("Error loading posts:", error);
-  } finally {
-    loading.style.display = "none";
   }
+
+  renderBatch();
 }
 
-window.addEventListener("scroll", () => {
+function handleScroll() {
   if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
     loadPosts();
   }
-});
+}
+
+window.addEventListener("scroll", handleScroll);
 
 loadPosts();
